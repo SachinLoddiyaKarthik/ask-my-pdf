@@ -126,5 +126,4 @@ jupyter notebook pdfQuery.ipynb
 
 ⭐ Star this repo if it helped you explore documents with LLMs!
 
-```
 
