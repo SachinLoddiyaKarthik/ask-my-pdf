@@ -1,45 +1,67 @@
 
-# 📄 Ask My PDF – Chatbot with LangChain & Streamlit
+# 📄 Ask My PDF 
+
+An intelligent question-answering system that lets you ask questions from PDF documents like government reports, budget speeches, or research papers using **LangChain**, **OpenAI**, and **FAISS**, all in a simple notebook workflow.
+
 
 [![LangChain](https://img.shields.io/badge/LangChain-00A896?style=for-the-badge)](https://www.langchain.com/)
 [![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)](https://openai.com/)
-[![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io/)
-[![HuggingFace](https://img.shields.io/badge/HuggingFace-FCC624?style=for-the-badge&logo=huggingface&logoColor=black)](https://huggingface.co/)
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org/)
+
+---
 
 ## 🎯 Project Overview
 
-An interactive chatbot app that allows users to ask questions about PDF documents—especially government or financial PDFs like Budget Speeches—using LangChain, OpenAI, and Streamlit.
+This project enables conversational interaction with the content of a PDF document using language models. It leverages:
 
-### 💡 Highlights
+- 📄 **PyMuPDF** to parse PDF content
+- 🧠 **LangChain** to structure the Q&A logic
+- 🔎 **FAISS** for semantic search
+- 🤖 **OpenAI** for language model responses
 
-- 📄 **PDF ingestion and chunking** using LangChain's `PyPDFLoader`
-- 🔗 **LangChain RetrievalQA** for context-aware document querying
-- 🤖 **OpenAI API** for generating intelligent responses
-- 🧠 **FAISS** for efficient similarity search over text chunks
-- 🔐 **dotenv integration** to securely manage API keys
-- 📺 **Streamlit interface** for user-friendly interaction
+The result is a lightweight, no-UI notebook system to explore documents intelligently.
 
-## 🏗️ Architecture
+---
 
-```
-PDF → Text Chunking → Embeddings (FAISS) → LangChain Retrieval → OpenAI LLM → Response
-```
+## 🛠 Tech Stack
 
-## ⚙️ Setup Instructions
+| Tool/Library   | Purpose                                 |
+|----------------|------------------------------------------|
+| Python         | Base programming language               |
+| LangChain      | Framework for chaining LLM tasks        |
+| OpenAI         | LLM provider for intelligent responses  |
+| FAISS          | Vector database for similarity search   |
+| PyMuPDF (fitz) | PDF parsing and text extraction         |
+| Jupyter        | Interactive development and exploration |
+| dotenv         | Secure management of API credentials    |
+
+---
+
+## 🧪 How It Works
+
+1. 📥 Load and parse a PDF file using `PyMuPDF`
+2. ✂️ Chunk the text and generate vector embeddings
+3. 📚 Store embeddings in a FAISS vector database
+4. ❓ Accept user questions
+5. 🔍 Retrieve relevant chunks using semantic similarity
+6. 💬 Use OpenAI to generate a response based on retrieved context
+
+---
+
+## 🚀 Getting Started
 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/SachinLoddiyaKarthik/ask-my-pdf.git
+git clone https://github.com/yourusername/ask-my-pdf.git
 cd ask-my-pdf
-```
+````
 
-### 2. Set Up Virtual Environment
+### 2. Create and Activate a Virtual Environment
 
 ```bash
 python -m venv venv
-source venv/bin/activate  # On Windows use `venv\Scriptsctivate`
+source venv/bin/activate  # On Windows: venv\\Scripts\\activate
 ```
 
 ### 3. Install Dependencies
@@ -48,44 +70,61 @@ source venv/bin/activate  # On Windows use `venv\Scriptsctivate`
 pip install -r requirements.txt
 ```
 
-### 4. Configure `.env` File
+### 4. Configure Your API Key
 
-Create a `.env` file and add your API key:
+Create a `.env` file and add:
 
 ```env
-OPENAI_API_KEY=your_openai_key_here
+OPENAI_API_KEY=your_openai_api_key_here
 ```
 
-### 5. Run the App
+### 5. Launch the Notebook
+
+Open the notebook in Jupyter:
 
 ```bash
-streamlit run app.py
+jupyter notebook pdfQuery.ipynb
 ```
 
-## 🛠 Tech Stack
+---
 
-| Tool         | Usage                                      |
-|--------------|---------------------------------------------|
-| Python       | Programming language                        |
-| Streamlit    | Frontend interface                          |
-| LangChain    | LLM chaining and document processing        |
-| OpenAI       | Large language model for answer generation  |
-| FAISS        | Semantic similarity search across chunks    |
-| dotenv       | Secure environment configuration            |
-| PyMuPDF      | PDF parsing and content extraction          |
+## ✨ Example Questions You Can Ask
 
-## ✨ Sample Output
+* "What is the fiscal deficit announced in the speech?"
+* "Summarize the MSME-related budget policies."
+* "What are the new tax changes mentioned in this document?"
+
+---
+
+## 📄 File Structure
 
 ```
-User: What is the fiscal deficit for 2025-26?
-Bot: The fiscal deficit for 2025-26 is estimated at 5.1% of GDP...
+📁 ask-my-pdf/
+├── pdfQuery.ipynb         # Main notebook for Q&A
+├── budget_speech.pdf      # Sample input PDF
+├── requirements.txt       # Required dependencies
+├── .env.example           # Sample env file
+└── README.md              # Project documentation
 ```
 
-## 🤝 Contributing
+---
 
-Feel free to fork, improve, and submit a pull request. Star ⭐ the repo if it helps you!
+## 🧠 Limitations
 
-## 📞 Contact
+* Works best with **well-formatted textual PDFs**
+* Not yet integrated into a Streamlit or web interface
+* Performance depends on LLM availability and API key usage
 
-- **GitHub**: [SachinLoddiyaKarthik](https://github.com/SachinLoddiyaKarthik)
-- **LinkedIn**: [Connect with me](https://www.linkedin.com/in/sachin-lk/)
+---
+
+## 📬 Contact
+
+* **GitHub**: [SachinLoddiyaKarthik](https://github.com/SachinLoddiyaKarthik)
+* **LinkedIn**: [Connect on LinkedIn](https://www.linkedin.com/in/sachin-lk/)
+
+---
+
+⭐ Star this repo if it helped you explore documents with LLMs!
+
+```
+
