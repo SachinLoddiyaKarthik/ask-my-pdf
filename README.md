@@ -31,7 +31,7 @@ PDF → Text Chunking → Embeddings (FAISS) → LangChain Retrieval → OpenAI 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/ask-my-pdf.git
+git clone https://github.com/SachinLoddiyaKarthik/ask-my-pdf.git
 cd ask-my-pdf
 ```
 
