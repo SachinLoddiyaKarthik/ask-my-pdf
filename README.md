@@ -53,7 +53,7 @@ The result is a lightweight, no-UI notebook system to explore documents intellig
 ### 1. Clone the Repository
 
 ```bash
-git clone [https://github.com/yourusername/ask-my-pdf.git](https://github.com/SachinLoddiyaKarthik/ask-my-pdf.git)
+git clone https://github.com/SachinLoddiyaKarthik/ask-my-pdf.git
 cd ask-my-pdf
 ````
 
