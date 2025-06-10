@@ -85,12 +85,67 @@ Open `pdfQuery.ipynb` to:
 
 ---
 
-## 📝 Sample Questions
 
-* “What’s the total expenditure mentioned in the document?”
-* “Extract the customer address from this invoice.”
-* “Summarize the MSME initiatives in this budget.”
-* “What’s inside the text block at coordinates (100, 300)?”
+## 📋 Sample Questions for `budget_speech.pdf`
+
+These are intelligent, real-world prompts users can try out in your app or notebook:
+
+### 🧠 General Summary
+
+* "Summarize the key themes of Budget 2025-26."
+* "What are the main objectives of this year’s budget?"
+* "What is meant by the term ‘Viksit Bharat’ in this budget?"
+
+### 🌾 Agriculture & Rural
+
+* "What is the Prime Minister Dhan-Dhaanya Krishi Yojana?"
+* "How does the budget plan to boost rural prosperity?"
+* "What is the Mission for Aatmanirbharta in Pulses?"
+* "Explain the focus of the Rural Prosperity and Resilience programme."
+* "What is the government doing to improve cotton productivity?"
+
+### 🏢 MSMEs and Startups
+
+* "What reforms were announced for MSMEs?"
+* "How will credit availability be improved for small businesses?"
+* "What are the features of the new scheme for first-time entrepreneurs?"
+* "What support is provided for the toy and leather sectors?"
+
+### 🧬 Innovation & Research
+
+* "What investments are proposed in research and innovation?"
+* "Tell me about the PM Research Fellowship scheme."
+* "What is the Deep Tech Fund of Funds?"
+
+### 👩‍🏫 Education & Health
+
+* "What are the plans to enhance medical education in India?"
+* "How will the government support school students and language learning?"
+* "What initiatives are planned for skilling youth?"
+* "What healthcare benefits are planned for gig workers?"
+
+### 🚰 Infrastructure & Urban Development
+
+* "What are the new PPP infrastructure projects announced?"
+* "Tell me about the Urban Challenge Fund."
+* "What is the plan for the Western Koshi Canal in Bihar?"
+
+### 🌐 Exports & Industry
+
+* "What are the four engines of economic growth mentioned?"
+* "How will BharatTradeNet support international trade?"
+* "Which sectors will be supported to integrate with global supply chains?"
+
+### 💰 Tax & Fiscal
+
+* "What are the new personal income tax slabs?"
+* "What changes have been made to TDS and TCS rules?"
+* "What is the fiscal deficit target for 2025-26?"
+
+### 🌍 Energy & Environment
+
+* "What is the Nuclear Energy Mission for Viksit Bharat?"
+* "What measures are proposed for clean tech manufacturing?"
 
 ---
 
