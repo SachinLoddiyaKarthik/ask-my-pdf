@@ -1,129 +1,149 @@
+# 📄 Ask My PDF: From Precise Scraping to Intelligent Q\&A
 
-# 📄 Ask My PDF 
-
-An intelligent question-answering system that lets you ask questions from PDF documents like government reports, budget speeches, or research papers using **LangChain**, **OpenAI**, and **FAISS**, all in a simple notebook workflow.
-
+A hybrid toolkit that blends the **surgical precision of layout-based PDF extraction** with the **intelligence of LLM-powered question answering**. Whether you're parsing invoice tables or conversing with a government budget report, this project has your back.
 
 [![LangChain](https://img.shields.io/badge/LangChain-00A896?style=for-the-badge)](https://www.langchain.com/)
-[![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)](https://openai.com/)
-[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org/)
+[![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge\&logo=openai\&logoColor=white)](https://openai.com/)
+[![FAISS](https://img.shields.io/badge/FAISS-Vector%20Search-blue?style=for-the-badge)](https://github.com/facebookresearch/faiss)
+[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge\&logo=python\&logoColor=white)](https://python.org/)
 
 ---
 
-## 🎯 Project Overview
+## 🎯 Project Modes
 
-This project enables conversational interaction with the content of a PDF document using language models. It leverages:
+### 🧱 1. Layout-Based Extraction (`PDFQuery.ipynb`)
 
-- 📄 **PyMuPDF** to parse PDF content
-- 🧠 **LangChain** to structure the Q&A logic
-- 🔎 **FAISS** for semantic search
-- 🤖 **OpenAI** for language model responses
+* Uses `pdfquery` to dig into text at specific positions or with specific styling.
+* Perfect for **structured PDF documents** like forms, invoices, or certificates.
+* Think: "Give me the text at coordinates (150, 500)!"
 
-The result is a lightweight, no-UI notebook system to explore documents intelligently.
+### 🧠 2. LLM-Powered Conversational Q\&A (`pdfQuery.ipynb`)
 
----
-
-## 🛠 Tech Stack
-
-| Tool/Library   | Purpose                                 |
-|----------------|------------------------------------------|
-| Python         | Base programming language               |
-| LangChain      | Framework for chaining LLM tasks        |
-| OpenAI         | LLM provider for intelligent responses  |
-| FAISS          | Vector database for similarity search   |
-| PyMuPDF (fitz) | PDF parsing and text extraction         |
-| Jupyter        | Interactive development and exploration |
-| dotenv         | Secure management of API credentials    |
+* Combines **LangChain**, **OpenAI**, **FAISS**, and **PyMuPDF**.
+* Great for **long-form, unstructured documents** like budget speeches or research papers.
+* Think: “Summarize the tax changes mentioned in this document.”
 
 ---
 
-## 🧪 How It Works
+## 🧰 Tech Stack
 
-1. 📥 Load and parse a PDF file using `PyMuPDF`
-2. ✂️ Chunk the text and generate vector embeddings
-3. 📚 Store embeddings in a FAISS vector database
-4. ❓ Accept user questions
-5. 🔍 Retrieve relevant chunks using semantic similarity
-6. 💬 Use OpenAI to generate a response based on retrieved context
+| Component    | Used In     | Purpose                             |
+| ------------ | ----------- | ----------------------------------- |
+| `pdfquery`   | Layout Mode | XML-style querying of text layout   |
+| `PyMuPDF`    | Q\&A Mode   | Extracts raw text from PDFs         |
+| `FAISS`      | Q\&A Mode   | Embedding-based chunk retrieval     |
+| `LangChain`  | Q\&A Mode   | Manages prompts, chaining, logic    |
+| `OpenAI API` | Q\&A Mode   | LLM for natural language answers    |
+| `dotenv`     | Q\&A Mode   | Secure API credential management    |
+| `Jupyter`    | Both        | Interactive, step-by-step notebooks |
 
 ---
 
 ## 🚀 Getting Started
 
-### 1. Clone the Repository
+### 1. Clone the Repo
 
 ```bash
 git clone https://github.com/SachinLoddiyaKarthik/ask-my-pdf.git
 cd ask-my-pdf
-````
+```
 
-### 2. Create and Activate a Virtual Environment
+### 2. Set Up Environment
 
 ```bash
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\\Scripts\\activate
-```
-
-### 3. Install Dependencies
-
-```bash
+source venv/bin/activate  # or venv\Scripts\activate on Windows
 pip install -r requirements.txt
 ```
 
-### 4. Configure Your API Key
+### 3. Configure API Keys
 
 Create a `.env` file and add:
 
 ```env
-OPENAI_API_KEY=your_openai_api_key_here
-```
-
-### 5. Launch the Notebook
-
-Open the notebook in Jupyter:
-
-```bash
-jupyter notebook pdfQuery.ipynb
+OPENAI_API_KEY=your_openai_key_here
 ```
 
 ---
 
-## ✨ Example Questions You Can Ask
+## 💡 How to Use
 
-* "What is the fiscal deficit announced in the speech?"
-* "Summarize the MSME-related budget policies."
-* "What are the new tax changes mentioned in this document?"
+### 📊 Precise Layout-Based Extraction
+
+Open `PDFQuery.ipynb` in Jupyter Notebook to:
+
+* Locate and extract text from exact positions
+* Query based on fonts, sizes, and coordinates
+
+### 💬 Ask My PDF: Chat with Your Docs
+
+Open `pdfQuery.ipynb` to:
+
+* Chunk and vectorize your PDF
+* Ask natural language questions
+* Get AI-generated answers with contextual snippets
 
 ---
 
-## 📄 File Structure
+## 📝 Sample Questions
+
+* “What’s the total expenditure mentioned in the document?”
+* “Extract the customer address from this invoice.”
+* “Summarize the MSME initiatives in this budget.”
+* “What’s inside the text block at coordinates (100, 300)?”
+
+---
+
+## 📁 Folder Structure
 
 ```
-📁 ask-my-pdf/
-├── pdfQuery.ipynb         # Main notebook for Q&A
-├── budget_speech.pdf      # Sample input PDF
-├── requirements.txt       # Required dependencies
-├── .env.example           # Sample env file
-└── README.md              # Project documentation
+ask-my-pdf/
+├── PDFQuery.ipynb         # Layout-based extraction notebook
+├── pdfQuery.ipynb         # LLM Q&A over PDF
+├── requirements.txt       # Project dependencies
+├── .env.example           # Sample environment file
+├── sample.pdf             # Add your PDFs here
+└── README.md              # This file!
 ```
 
 ---
 
-## 🧠 Limitations
+## ⚠️ Limitations
 
-* Works best with **well-formatted textual PDFs**
-* Not yet integrated into a Streamlit or web interface
-* Performance depends on LLM availability and API key usage
-
----
-
-## 📬 Contact
-
-* **GitHub**: [SachinLoddiyaKarthik](https://github.com/SachinLoddiyaKarthik)
-* **LinkedIn**: [Connect on LinkedIn](https://www.linkedin.com/in/sachin-lk/)
+| Feature             | Limitation                           |
+| ------------------- | ------------------------------------ |
+| `pdfquery`          | Doesn’t work on image-based PDFs     |
+| `Ask My PDF` (Q\&A) | Relies on OpenAI API & good chunking |
+| Both                | No web UI (yet 😉)                   |
 
 ---
 
-⭐ Star this repo if it helped you explore documents with LLMs!
+## 🤝 Contribute & Explore
 
+Feel free to fork, star ⭐, or submit PRs for improvements. Future ideas:
 
+* Streamlit UI
+* OCR support
+* Multi-PDF chaining
+
+---
+
+## 📬 Connect with Me
+
+**Author**: [Sachin Loddiya Karthik](https://www.linkedin.com/in/sachin-lk/)
+**GitHub**: [SachinLoddiyaKarthik](https://github.com/SachinLoddiyaKarthik)
+
+---
+
+## 🌟 Like It?
+
+Star this repo if it saved you hours of manual PDF scraping or searching. Your support motivates more such tools! 🙌
+
+---
+
+Would you like me to now:
+
+* 📦 Generate the `requirements.txt` based on both notebooks
+* 🧾 Create the `.env.example` file
+
+So the repo is fully launch-ready?
