@@ -5,7 +5,7 @@ An intelligent, multilingual PDF assistant that lets you **upload, chat with, an
 ### 📦 Live Demo
 
 🚀 Check out the deployed app here:  
-👉 **[ask-my-pdf-pro.streamlit.app
+👉 **[ask-my-pdf-pro.streamlit.app](https://ask-my-pdf-pro.streamlit.app/)**
 
 [![Streamlit App](https://img.shields.io/badge/Live%20App-Ask%20My%20PDF%20Pro-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://ask-my-pdf-pro.streamlit.app/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-App-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io/)
