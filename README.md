@@ -2,6 +2,12 @@
 
 An intelligent, multilingual PDF assistant that lets you **upload, chat with, and extract answers** from multiple documents using **Hybrid Retrieval (Vector + BM25)** and **LLMs (Gemini / ChatGPT)**. From research papers and invoices to contracts and policy reports — this app handles them all with contextual understanding.
 
+### 📦 Live Demo
+
+🚀 Check out the deployed app here:  
+👉 **[ask-my-pdf-pro.streamlit.app
+
+[![Streamlit App](https://img.shields.io/badge/Live%20App-Ask%20My%20PDF%20Pro-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://ask-my-pdf-pro.streamlit.app/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-App-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io/)
 [![LangChain](https://img.shields.io/badge/LangChain-00A896?style=for-the-badge)](https://www.langchain.com/)
 [![FAISS](https://img.shields.io/badge/FAISS-Vector%20Search-blue?style=for-the-badge)](https://github.com/facebookresearch/faiss)
